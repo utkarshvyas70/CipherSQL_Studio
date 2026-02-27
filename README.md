@@ -30,20 +30,4 @@
 
 ---
 
-## 🚀 Installation & Setup
 
-### 1. Prerequisites
-* Node.js installed
-* PostgreSQL installed and running
-* A Google Gemini API Key
-
-### 2. Backend Setup
-1. Navigate to the server folder: `cd server`
-2. Install dependencies: `npm install`
-3. Create a `.env` file and add your credentials:
-   ```env
-   DB_USER=postgres
-   DB_PASSWORD=admin
-   DB_HOST=localhost
-   DB_PORT=5432
-   DB_NAME=CipherSQL
