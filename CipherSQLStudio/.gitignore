@@ -1,0 +1,12 @@
+# Dependencies
+node_modules/
+/client/node_modules/
+/server/node_modules/
+
+# Security
+.env
+.DS_Store
+
+# Build output
+dist/
+build/

@@ -1,0 +1,203 @@
+
+$bg-dark:       #1e1e1e;   
+$bg-panel:      #252526;   
+$primary:       #61dafb;   
+$secondary:     #00ff9d;   
+$accent:        #e0c04c;   
+$text-main:     #ffffff;
+$text-muted:    #a0a0a0;
+$border:        #444444;
+
+$font-stack:    'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$code-font:     'Courier New', Courier, monospace;
+
+@mixin tablet {
+  @media (min-width: 641px) { @content; }
+}
+@mixin desktop {
+  @media (min-width: 1024px) { @content; }
+}
+@mixin large {
+  @media (min-width: 1281px) { @content; }
+}
+body {
+  background-color: $bg-dark;
+  color: $text-main;
+  font-family: $font-stack;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+.app-container {
+  padding: 10px; 
+  width: 100%;
+  box-sizing: border-box;
+
+  @include tablet {
+    padding: 20px;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+ 
+  @include desktop {
+    max-width: 900px;
+  }
+}
+
+header {
+  text-align: center;
+  border-bottom: 1px solid $border;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+
+  h1 {
+    font-size: 1.8rem;
+    color: $primary;
+    margin: 0;
+  }
+}
+
+
+.assignment-card {
+  background: $bg-panel;
+  border: 1px solid $border;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  transition: transform 0.2s ease;
+
+  h3 {
+    color: $secondary;
+    margin-top: 0;
+  }
+
+  p {
+    color: $text-muted;
+    font-size: 0.9rem;
+  }
+
+  
+  @include desktop {
+    &:hover {
+      transform: translateY(-2px);
+      border-color: $primary;
+    }
+  }
+}
+
+
+.sql-editor-container {
+  background: $bg-panel;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid $border;
+  margin-top: 30px;
+
+  h3 { margin-top: 0; }
+}
+
+textarea {
+  width: 100%;
+  box-sizing: border-box; 
+  background: darken($bg-dark, 2%);
+  color: $secondary;
+  font-family: $code-font;
+  font-size: 14px;
+  border: 1px solid $border;
+  border-radius: 4px;
+  padding: 10px;
+  min-height: 120px;
+  
+  &:focus {
+    outline: none;
+    border-color: $primary;
+  }
+
+  @include desktop {
+    min-height: 200px;
+    font-size: 16px;
+  }
+}
+
+
+button {
+  width: 100%; 
+  padding: 12px;
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+
+  &.run-btn { background: $primary; color: #000; }
+  
+ 
+  @include tablet {
+    width: auto;
+    padding: 10px 20px;
+    margin-right: 10px;
+  }
+
+  &:hover { opacity: 0.8; }
+}
+
+
+.table-wrapper {
+  margin-top: 20px;
+  overflow-x: auto; 
+  border: 1px solid $border;
+  border-radius: 4px;
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 400px; 
+  }
+
+  th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid $border;
+    font-size: 0.9rem;
+  }
+
+  th {
+    background: lighten($bg-panel, 5%);
+    color: $primary;
+  }
+}
+
+
+.schema-panel {
+  background: #333;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  border-left: 4px solid #61dafb;
+}
+
+.schema-tag {
+  display: inline-block;
+  background: #252526;
+  padding: 4px 8px;
+  margin: 5px 5px 0 0;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 0.85rem;
+  border: 1px solid #444;
+}
+
+.editor-wrapper {
+  border: 1px solid #444;
+  border-radius: 4px;
+  overflow: hidden; 
+  margin-bottom: 15px;
+}
+
+.hint-btn {
+  background: #e0c04c;
+  color: #000;
+  
+}

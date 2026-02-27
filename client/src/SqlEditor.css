@@ -1,0 +1,57 @@
+.sql-editor-container {
+  margin-top: 20px;
+  background: #252526;
+  padding: 20px;
+  border-radius: 8px;
+  color: white;
+}
+
+textarea {
+  width: 100%;
+  background: #1e1e1e;
+  color: #00ff9d; 
+  font-family: 'Courier New', monospace;
+  font-size: 16px;
+  border: 1px solid #444;
+  padding: 10px;
+  margin-bottom: 10px;
+  resize: vertical;
+}
+
+.run-btn {
+  background: #61dafb;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.run-btn:hover { background: #4fa8c7; }
+
+.error-box {
+  margin-top: 10px;
+  background: #3e1b1b;
+  color: #ff6b6b;
+  padding: 10px;
+  border: 1px solid #ff4d4d;
+  border-radius: 4px;
+}
+
+.table-wrapper {
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #444;
+  padding: 8px;
+  text-align: left;
+}
+
+th { background: #333; color: #61dafb; }

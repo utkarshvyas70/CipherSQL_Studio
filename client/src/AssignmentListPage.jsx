@@ -1,20 +1,20 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import './AssignmentListPage.scss'; // We will create this next
+import './AssignmentListPage.scss'; 
 
 const AssignmentListPage = () => {
-  // State 1: Store the list of assignments
+  
   const [assignments, setAssignments] = useState([]);
   
-  // State 2: Track if data is loading or if there's an error
+  
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // Effect: Fetch data when the component mounts
+  
   useEffect(() => {
     const fetchAssignments = async () => {
       try {
-        // "axios" automatically converts JSON for us
+        
         const response = await axios.get('http://localhost:5000/assignments');
         setAssignments(response.data);
         setLoading(false);
@@ -25,7 +25,7 @@ const AssignmentListPage = () => {
     };
 
     fetchAssignments();
-  }, []); // Empty array [] means "run once on load"
+  }, []); 
 
   if (loading) return <div className="status">Loading assignments...</div>;
   if (error) return <div className="status error">{error}</div>;
