@@ -31,9 +31,8 @@
 ---
 ## 0 and 1 level dfd's
 <img width="1132" height="565" alt="image" src="https://github.com/user-attachments/assets/45116746-2483-4444-a77f-18ee59aca4a0" />
-<img width="1132" height="565" alt="image" src="https://github.com/user-attachments/assets/45116746-2483-4444-a77f-18ee59aca4a0" />
 <img width="1017" height="597" alt="image" src="https://github.com/user-attachments/assets/4b676cae-5495-4c99-8564-f93f88f925c8" />
-<img width="1017" height="597" alt="image" src="https://github.com/user-attachments/assets/4b676cae-5495-4c99-8564-f93f88f925c8" />
+
 
 
 
